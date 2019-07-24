@@ -3,13 +3,11 @@ import { Action } from '../../Interfaces/types';
 import { Weather } from '../../Interfaces/models';
 
 export interface WeatherDataState {
-  loading: boolean;
   weather: Weather | undefined;
   error: string;
 }
 
 const initialState: WeatherDataState = {
-  loading: false,
   weather: undefined,
   error: ''
 };
@@ -20,16 +18,16 @@ export default function weatherReducer(
 ): WeatherDataState {
   switch (action.type) {
     case WeatherActionsType.GET_WEATHER_BY_CITY_CORDS: {
-      return { ...state, loading: true };
+      return { ...state };
     }
     case WeatherActionsType.GET_WEATHER_BY_CITY_SUCCESS: {
       const { weather } = action;
-      return { ...state, loading: false, weather, error: '' };
+      return { ...state, weather, error: '' };
     }
 
     case WeatherActionsType.GET_WEATHER_BY_CITY_FAILURE: {
       const { error } = action;
-      return { ...state, loading: false, error };
+      return { ...state, error };
     }
     default:
       return state;

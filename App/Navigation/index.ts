@@ -8,7 +8,6 @@ import {
 import HomeScreen from '../Screens/Home';
 import LoginScreen from '../Screens/Login';
 import RegisterScreen from '../Screens/Register';
-import SplashScreen from '../Screens/Splash';
 
 // Main Stack
 const AppStackNavigation = createStackNavigator(
@@ -18,7 +17,7 @@ const AppStackNavigation = createStackNavigator(
   {
     initialRouteName: 'Home',
     defaultNavigationOptions: {
-      header: null
+      title: 'Wheater App'
     }
   }
 );
@@ -42,7 +41,6 @@ const AuthStackNavigation = createStackNavigator(
 const AppNavigation = createAppContainer(
   createSwitchNavigator(
     {
-      Splash: SplashScreen,
       App: AppStackNavigation,
       Auth: AuthStackNavigation
     },
