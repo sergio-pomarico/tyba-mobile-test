@@ -30,6 +30,8 @@
     "@babel/core": "^7.5.5",
     "@babel/runtime": "^7.5.5",
     "@react-native-community/eslint-config": "^0.0.5",
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.15",
     "@types/react": "^16.8.23",
     "@types/react-native": "^0.60.2",
@@ -37,26 +39,35 @@
     "@types/react-redux": "^7.1.1",
     "@types/react-test-renderer": "^16.8.2",
     "@types/redux-form": "^8.1.4",
+    "@types/redux-mock-store": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "babel-jest": "^24.8.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^3.0.1",
     "jest": "^24.8.0",
+    "jest-serializer-enzyme": "^1.0.0",
     "metro-react-native-babel-preset": "^0.55.0",
     "prettier": "^1.18.2",
+    "react-dom": "^16.8.6",
     "react-test-renderer": "16.8.6",
+    "redux-mock-store": "^1.5.3",
     "typescript": "^3.5.3"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "snapshotSerializers": [
+      "./node_modules/jest-serializer-enzyme"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint"
+      "pre-commit": "yarn lint & yarn jest"
     }
   }
 }
