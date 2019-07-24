@@ -6,18 +6,20 @@ import {
   AnyAction
 } from 'redux';
 import createSagaMiddleware from 'redux-saga';
+import { reducer as form } from 'redux-form';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { all } from '@redux-saga/core/effects';
 
 // Reducers & Sagas
-// import { authReducer, authSaga } from './auth';
-// import { usersReducer } from './users';
+import { authReducer, authSaga } from './auth';
+import { usersReducer } from './users';
 import { weatherReducer, weatherSaga } from './weather';
 
 const metaReducers: Reducer<any, AnyAction> = combineReducers({
-  // auth: authReducer,
-  // users: usersReducer,
-  weather: weatherReducer
+  auth: authReducer,
+  users: usersReducer,
+  weather: weatherReducer,
+  form
 });
 
 // Saga

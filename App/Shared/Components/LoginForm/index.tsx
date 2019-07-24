@@ -6,7 +6,8 @@ import Input from '../Input';
 import Button from '../Button';
 
 interface LoginFormProps {
-  handleSubmit: (email: string, password: string) => void;
+  handleSubmit: (values: any) => void;
+  handleLogin: (email: string, password: string) => void;
 }
 
 interface Values {
@@ -16,7 +17,7 @@ interface Values {
 
 class LoginForm extends Component<LoginFormProps> {
   render() {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, handleLogin } = this.props;
     return (
       <View style={styles.container}>
         <Field name="email" component={Input} placeholder="email" isEmail />
@@ -28,7 +29,9 @@ class LoginForm extends Component<LoginFormProps> {
         />
         <Button
           text="Login"
-          onPress={({ email, password }) => handleSubmit(email, password)}
+          onPress={() =>
+            handleSubmit(({ email, password }) => handleLogin(email, password))
+          }
         />
       </View>
     );

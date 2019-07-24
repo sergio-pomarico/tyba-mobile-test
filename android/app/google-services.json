@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "595543876561",
+    "firebase_url": "https://tyba-mobile-test.firebaseio.com",
+    "project_id": "tyba-mobile-test",
+    "storage_bucket": "tyba-mobile-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595543876561:android:b76fc3a798bb27b6",
+        "android_client_info": {
+          "package_name": "com.tyba_mobile_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595543876561-7r4ckrldfl2tprh56hhnqdff4q72padp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3NqlWJzmRkLwHvHvLPRJv-yy3-O9o-Qw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595543876561-7r4ckrldfl2tprh56hhnqdff4q72padp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

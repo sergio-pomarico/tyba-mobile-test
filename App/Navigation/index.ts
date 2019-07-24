@@ -26,14 +26,16 @@ const AppStackNavigation = createStackNavigator(
 // Auth Stack
 const AuthStackNavigation = createStackNavigator(
   {
-    Login: LoginScreen,
+    Login: {
+      screen: LoginScreen,
+      navigationOptions: {
+        header: null
+      }
+    },
     Register: RegisterScreen
   },
   {
-    initialRouteName: 'Login',
-    defaultNavigationOptions: {
-      header: null
-    }
+    initialRouteName: 'Login'
   }
 );
 
@@ -45,7 +47,7 @@ const AppNavigation = createAppContainer(
       Auth: AuthStackNavigation
     },
     {
-      initialRouteName: 'App'
+      initialRouteName: 'Auth'
     }
   )
 );

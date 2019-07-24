@@ -18,6 +18,9 @@
 		2DCD954D1E0B4F2C00145EB5 /* tyba_mobile_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* tyba_mobile_testTests.m */; };
 		3074D4610D9C414DB63AB350 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74C0A591D7FC4CF1B33FEF1D /* Fontisto.ttf */; };
 		3745D8870C1743EAB32E43AD /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B911F18C3434262BE383E55 /* Entypo.ttf */; };
+		4946425422E7E6A100181382 /* weathericons-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4946425222E7E6A100181382 /* weathericons-regular-webfont.ttf */; };
+		4946425522E7E6A100181382 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4946425322E7E6A100181382 /* icomoon.ttf */; };
+		4946425722E7E96200181382 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4946425622E7E96100181382 /* GoogleService-Info.plist */; };
 		497198BCCD912F6F86D42762 /* libPods-tyba_mobile_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E07E6A018839CE6F039BFB /* libPods-tyba_mobile_test.a */; };
 		49F0EF4FDE504A39BFDFF78B /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0A8CCAC00874D9B9DD2BF19 /* Foundation.ttf */; };
 		5BD6EC5F880E930CF2A66DCF /* libPods-tyba_mobile_testTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE0E374D39DB6187B1A3AE8 /* libPods-tyba_mobile_testTests.a */; };
@@ -78,7 +81,9 @@
 		3A82C3DF7394FBC0B9FB3FA7 /* Pods-tyba_mobile_test-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tyba_mobile_test-tvOS.release.xcconfig"; path = "Target Support Files/Pods-tyba_mobile_test-tvOS/Pods-tyba_mobile_test-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		3C98F20163424C449975B41C /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		3DE0E374D39DB6187B1A3AE8 /* libPods-tyba_mobile_testTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tyba_mobile_testTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4946425122E7E0EA00181382 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = icomoon.ttf; path = "../../../Downloads/react-native-weather-icons/fonts/icomoon.ttf"; sourceTree = "<group>"; };
+		4946425222E7E6A100181382 /* weathericons-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "weathericons-regular-webfont.ttf"; path = "../resources/fonts/weathericons-regular-webfont.ttf"; sourceTree = "<group>"; };
+		4946425322E7E6A100181382 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = icomoon.ttf; path = ../resources/fonts/icomoon.ttf; sourceTree = "<group>"; };
+		4946425622E7E96100181382 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		565F081DB5904C94A6350F92 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		7312657A9F1548109F6BCF07 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		739FF9276DE9B8AE8D0E6FF2 /* Pods-tyba_mobile_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tyba_mobile_test.debug.xcconfig"; path = "Target Support Files/Pods-tyba_mobile_test/Pods-tyba_mobile_test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +163,7 @@
 		13B07FAE1A68108700A75B9A /* tyba_mobile_test */ = {
 			isa = PBXGroup;
 			children = (
+				4946425622E7E96100181382 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -185,9 +191,10 @@
 		48F6DA05272C4DF3AFD8087F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4946425322E7E6A100181382 /* icomoon.ttf */,
+				4946425222E7E6A100181382 /* weathericons-regular-webfont.ttf */,
 				CC736A224FF8459DA757F83B /* AntDesign.ttf */,
 				2B911F18C3434262BE383E55 /* Entypo.ttf */,
-				4946425122E7E0EA00181382 /* icomoon.ttf */,
 				7312657A9F1548109F6BCF07 /* EvilIcons.ttf */,
 				F66875385D32464481FB1C61 /* Feather.ttf */,
 				E2A532A41A8C4B8689CE7AAA /* FontAwesome.ttf */,
@@ -410,9 +417,12 @@
 				E00DCEA91BA94E6BB3198900 /* Ionicons.ttf in Resources */,
 				B0371A87625B4C45926B94DD /* MaterialCommunityIcons.ttf in Resources */,
 				ED8EAF9E6A2A49A0A3B7A7FF /* MaterialIcons.ttf in Resources */,
+				4946425522E7E6A100181382 /* icomoon.ttf in Resources */,
 				5F7AED40F19A4F98A76309A0 /* Octicons.ttf in Resources */,
 				FB0C9B9B7E67441A902D1C8D /* SimpleLineIcons.ttf in Resources */,
+				4946425422E7E6A100181382 /* weathericons-regular-webfont.ttf in Resources */,
 				86489B16D659430385BEBC2B /* Zocial.ttf in Resources */,
+				4946425722E7E96200181382 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

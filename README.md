@@ -24,7 +24,6 @@ npm run android
       |--Utils
         |--Requester: Class to manage all http requests .
     |--Store: all Redux implementation, are organized by knowledge domain.
-    |--Theme: Everything related to styles: colors, global styles, themes, etc.
     App.tsx: App Main File
 ```
 
