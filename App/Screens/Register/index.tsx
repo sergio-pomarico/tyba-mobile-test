@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { Component, Dispatch } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
+import { AnyAction } from 'redux';
 
 import { RegisterForm } from '../../Shared';
-// import { makeRegister } from '../../store/register/actions';
+import { signin } from '../../Store/auth/actions';
 
-class RegisterScreen extends React.Component {
+interface RegisterProps {
+  navigation: any;
+  dispatch: Dispatch<AnyAction>;
+}
+
+class RegisterScreen extends Component<RegisterProps> {
   state = {};
 
-  handleRegister = values => {
-    // const { register } = this.props;
-    // register(values);
+  handleRegister = (email: string, password: string) => {
+    this.props.dispatch(signin(email, password));
   };
 
   render() {
@@ -31,7 +36,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default connect(
-  null,
-  null
-)(RegisterScreen);
+export default connect(null)(RegisterScreen);

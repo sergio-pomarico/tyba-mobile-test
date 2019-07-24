@@ -3,6 +3,7 @@ import { View, TouchableOpacity, Text } from 'react-native';
 import { AnyAction } from 'redux';
 import { connect } from 'react-redux';
 import { LoginForm } from '../../Shared';
+import { login } from '../../Store/auth/actions';
 
 import styles from './styles';
 
@@ -20,7 +21,7 @@ class LoginScreen extends Component<LoginProps> {
   };
 
   handleSubmit = (email: string, password: string) => {
-    console.log(email, password);
+    this.props.dispatch(login(email, password));
   };
 
   render() {
@@ -35,9 +36,4 @@ class LoginScreen extends Component<LoginProps> {
   }
 }
 
-const mapStateToProps = ({ weather }: any) => ({
-  weather: weather.weather,
-  weatherError: weather.error
-});
-
-export default connect(mapStateToProps)(LoginScreen);
+export default connect(null)(LoginScreen);

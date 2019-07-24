@@ -38,4 +38,4 @@ npm run android
 - [`redux-form`](https://github.com/erikras/redux-form)
 - [`redux-saga`](https://redux-saga.js.org/)
 - [`react-native-linear-gradient`](https://github.com/react-native-community/react-native-linear-gradient)
-- [`react-native-keyboard-aware-scroll-view`](https://github.com/APSL/react-native-keyboard-aware-scroll-view)
+- [`react-native-firebase`](https://rnfirebase.io/)

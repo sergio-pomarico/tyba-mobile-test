@@ -7,7 +7,7 @@ import { Action } from '../../Interfaces/types';
 import { getUserSuccess, getUserError } from '../users/actions';
 import NavigationService from '../../Navigation/navigationService';
 
-export function* signin(action: Action): IterableIterator<any> {
+export function* signIn(action: Action): IterableIterator<any> {
   try {
     const { email, password } = action;
     const { user } = yield firebase
@@ -42,6 +42,6 @@ export function* login(action: Action): IterableIterator<any> {
 }
 
 export const authSaga = [
-  takeLatest(AuthActionsType.SIGN_IN_USER, signin),
+  takeLatest(AuthActionsType.SIGN_IN_USER, signIn),
   takeLatest(AuthActionsType.LOG_IN_USER, login)
 ];

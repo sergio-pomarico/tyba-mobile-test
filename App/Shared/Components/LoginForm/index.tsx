@@ -29,9 +29,9 @@ class LoginForm extends Component<LoginFormProps> {
         />
         <Button
           text="Login"
-          onPress={() =>
-            handleSubmit(({ email, password }) => handleLogin(email, password))
-          }
+          onPress={handleSubmit(({ email, password }) =>
+            handleLogin(email, password)
+          )}
         />
       </View>
     );

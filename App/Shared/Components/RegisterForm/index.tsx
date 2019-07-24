@@ -6,7 +6,8 @@ import Input from '../Input';
 import Button from '../Button';
 
 interface RegisterFormProps {
-  handleSubmit: (email: string, password: string) => void;
+  handleSubmit: (values: any) => void;
+  handleRegister: (email: string, password: string) => void;
 }
 
 interface Values {
@@ -18,7 +19,7 @@ interface Values {
 
 class RegisterForm extends Component<RegisterFormProps> {
   render() {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, handleRegister } = this.props;
     return (
       <View style={styles.container}>
         <Field name="name" component={Input} placeholder="name" />
@@ -37,7 +38,9 @@ class RegisterForm extends Component<RegisterFormProps> {
         />
         <Button
           text="Register"
-          onPress={({ email, password }) => handleSubmit(email, password)}
+          onPress={handleSubmit(({ email, password }) =>
+            handleRegister(email, password)
+          )}
         />
       </View>
     );

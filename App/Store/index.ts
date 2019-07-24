@@ -24,7 +24,7 @@ const metaReducers: Reducer<any, AnyAction> = combineReducers({
 
 // Saga
 function* rootSaga() {
-  yield all([...weatherSaga]);
+  yield all([...weatherSaga, ...authSaga]);
 }
 
 const sagaMiddleware = createSagaMiddleware();
