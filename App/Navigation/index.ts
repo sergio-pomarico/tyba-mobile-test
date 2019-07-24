@@ -45,7 +45,7 @@ const AppNavigation = createAppContainer(
       Auth: AuthStackNavigation
     },
     {
-      initialRouteName: 'Auth'
+      initialRouteName: 'App'
     }
   )
 );

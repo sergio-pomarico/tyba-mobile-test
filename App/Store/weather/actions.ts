@@ -1,9 +1,9 @@
 import { WeatherActionsType } from './actions.type';
 import { Weather } from '../../Interfaces/models';
 
-export const getWeatherByCity = (cityName: string) => ({
-  cityName,
-  type: WeatherActionsType.GET_WEATHER_BY_CITY
+export const getWeatherByCityCoord = (latitude: number, longitude: number) => ({
+  coords: { latitude, longitude },
+  type: WeatherActionsType.GET_WEATHER_BY_CITY_CORDS
 });
 
 export const getWeatherByCitySuccess = (weather: Weather) => ({

@@ -18,9 +18,21 @@ export default class Requester {
     return Requester.instance.api.get(url);
   }
 
-  getWeatherByCityName(cityName: string): AxiosPromise<any> {
+  getCityNameByCords({
+    latitude,
+    longitude
+  }: {
+    latitude: number;
+    longitude: number;
+  }): AxiosPromise<any> {
     return Requester.instance.api.get(
-      `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=8d671d088abd814a3632b7f6c5f36c47&units=metric`
+      `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=570fde810b524c158c10011a6b35089a`
+    );
+  }
+
+  getWeatherByCityName(city: string): AxiosPromise<any> {
+    return Requester.instance.api.get(
+      `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=a3a60021531a13c454cc1facb1498bf3&units=metric`
     );
   }
 }

@@ -19,7 +19,7 @@ export default function weatherReducer(
   action: Action
 ): WeatherDataState {
   switch (action.type) {
-    case WeatherActionsType.GET_WEATHER_BY_CITY: {
+    case WeatherActionsType.GET_WEATHER_BY_CITY_CORDS: {
       return { ...state, loading: true };
     }
     case WeatherActionsType.GET_WEATHER_BY_CITY_SUCCESS: {
