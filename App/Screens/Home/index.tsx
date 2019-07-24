@@ -6,7 +6,7 @@ import { AnyAction } from 'redux';
 import { connect } from 'react-redux';
 
 import { getWeatherByCityCoord } from '../../Store/weather/actions';
-import { Weather } from '../../Interfaces/models';
+import { Weather, User } from '../../Interfaces/models';
 import { Icon } from '../../Shared';
 import { Icons } from './const';
 import styles from './styles';
@@ -14,6 +14,8 @@ import styles from './styles';
 interface Props {
   dispatch: Dispatch<AnyAction>;
   weather: Weather;
+  weatherError: string;
+  user: User;
 }
 
 class HomeScreen extends Component<Props, {}> {
@@ -46,22 +48,25 @@ class HomeScreen extends Component<Props, {}> {
   }
 
   render() {
-    const { weather, weatherError } = this.props;
+    const { weather, weatherError, user } = this.props;
     return (
       <View style={styles.container}>
-        {weather && (
-          <View style={styles.mainInfo}>
-            <Text style={styles.cityName}>{weather.name}</Text>
-            <Text style={styles.temp}>{weather.main.temp}°</Text>
-            {this.getWeatherIcon(weather.weather[0].main) !== 'N/A' && (
-              <Icon
-                name={this.getWeatherIcon(weather.weather[0].main)}
-                style={styles.weatherIconMain}
-              />
-            )}
-            <Text style={styles.weather}>{weather.weather[0].main}</Text>
-          </View>
-        )}
+        <Text style={styles.email}>{user.email}</Text>
+        <View style={styles.mainInfo}>
+          {weather && (
+            <>
+              <Text style={styles.cityName}>{weather.name}</Text>
+              <Text style={styles.temp}>{weather.main.temp}°</Text>
+              {this.getWeatherIcon(weather.weather[0].main) !== 'N/A' && (
+                <Icon
+                  name={this.getWeatherIcon(weather.weather[0].main)}
+                  style={styles.weatherIconMain}
+                />
+              )}
+              <Text style={styles.weather}>{weather.weather[0].main}</Text>
+            </>
+          )}
+        </View>
         {weatherError === 'NOT_FOUND' && (
           <Text style={styles.cityNotFound}>City not found</Text>
         )}
@@ -74,9 +79,10 @@ class HomeScreen extends Component<Props, {}> {
   }
 }
 
-const mapStateToProps = ({ weather }: any) => ({
+const mapStateToProps = ({ weather, users }: any) => ({
   weather: weather.weather,
-  weatherError: weather.error
+  weatherError: weather.error,
+  user: users.user
 });
 
 export default connect(mapStateToProps)(HomeScreen);

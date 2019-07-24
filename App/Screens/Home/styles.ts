@@ -14,28 +14,35 @@ const styles = StyleSheet.create({
   },
   cityName: {
     fontSize: 25,
-    color: 'black'
+    color: '#A2A2A2'
   },
   temp: {
     fontSize: 80,
     fontWeight: '800',
-    color: 'black'
+    color: '#A2A2A2'
   },
   weatherIconMain: {
     fontSize: 150,
     marginTop: -20,
     marginBottom: -10,
-    color: 'black'
+    color: '#A2A2A2'
   },
   weather: {
     fontSize: 16,
-    color: 'black'
+    color: '#A2A2A2'
   },
   cityNotFound: {
     color: '#F44336',
     fontSize: 14,
     width: '100%',
     textAlign: 'center'
+  },
+  email: {
+    color: '#212121',
+    textAlign: 'right',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 30
   }
 });
 
